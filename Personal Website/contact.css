@@ -1,0 +1,197 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Body Styling */
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make the logo circular */
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    object-fit: cover; /* Ensures the image fills the circle */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Social Media Logos */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.social-logo {
+    width: 60px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-logo:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* CV Download Button */
+.cv-button {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cv-button i {
+    font-size: 1.5rem;
+}
+
+.cv-button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Light Mode CV Button */
+body.light-mode .cv-button {
+    background-color: #000;
+    color: #fff;
+}
+
+body.light-mode .cv-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark Mode Toggle Button */
+.theme-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.theme-button:active {
+    transform: rotate(180deg);
+}
+
+/* Hamburger Menu */
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Icon on Hover */
+.menu-container:hover .menu-icon {
+    transform: rotate(90deg);
+}
+
+/* Show Menu on Hover */
+.menu-container:hover .menu {
+    display: block;
+}
+
+/* Hidden Dropdown Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #000;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Links */
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: #333;
+}

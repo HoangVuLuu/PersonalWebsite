@@ -1,0 +1,221 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Dark Mode (Default) */
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Portfolio Items */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Portfolio Item Images */
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay (Hidden by Default) */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Show Overlay on Hover */
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Scale Image on Hover */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Project Description */
+.portfolio-overlay p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* View Project Button */
+.view-project-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.view-project-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .portfolio-overlay {
+    background: rgba(255, 255, 255, 0.8); /* Light overlay */
+    color: #000;
+}
+
+body.light-mode .view-project-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+body.light-mode .view-project-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Light Mode Adjustments */
+body.light-mode .portfolio-item {
+    background: #000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme Toggle Button */
+.theme-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.theme-button:active {
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Container */
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Icon on Hover */
+.menu-container:hover .menu-icon {
+    transform: rotate(90deg);
+}
+
+/* Show Menu on Hover */
+.menu-container:hover .menu {
+    display: block;
+}
+
+/* Hidden Dropdown Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #000;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Links */
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: #333;
+}

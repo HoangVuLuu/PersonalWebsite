@@ -3,138 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoang Vu Luu - Personal Website</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hoang Vu Luu Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header class="bg-dark text-white py-3">
-        <div class="container">
-            <h1>HOANG VU LUU</h1>
-            <nav>
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a href="#about" class="nav-link text-white">About Me</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link text-white">Projects</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Profile Picture Section -->
-    <section id="profile-picture" class="my-5 text-center">
-        <div class="container">
-            <img src="profile.jpg" alt="Your Name" class="rounded-circle img-fluid profile-img">
-        </div>
-    </section>
-
- <!-- About Me Section -->
-<section id="about" class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center">About Me</h2>
-        <div class="row align-items-center">
-            <!-- Text Column -->
-            <div class="col-md-6">
-                <p class="lead">My name is Hoang Vu and I'm a CO-OP software engineer student at Concordia University. I'm an athlete that is always open to try new activities. But don't get the wrong idea, I am still a huge nerd.</p>
+        <!-- Dark Mode Toggle Button -->
+<button id="themeToggle" class="theme-button">🌙</button>
+
+        <!-- Hamburger Menu -->
+<div class="menu-container">
+    <div class="menu-icon" id="menuIcon">&#9776;</div> <!-- ☰ icon -->
+    <div class="menu" id="menu">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1 class="title">Hoang Vu Luu Portfolio</h1>
+            <p class="animated-text" id="changingText">Here is 3 fun facts about me</p>
+            <p class="description">This is my portfolio. Feel free to look around and get in touch with me.</p>
+            <div class="buttons">
+                <a href="portfolio.html" class="btn portfolio-btn">My Portfolio</a>
+                <a href="contact.html" class="btn btn-outline">Contact Me</a>
             </div>
-            <!-- Image Column -->
-            <div class="col-md-6 text-center">
-                <img src="IMG_3723.JPG" alt="Athlete in Action" class="img-fluid small-img rounded">
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-    </div>
-</section>
 
-
-
-    
-
-    <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center">Projects</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Weather Application</h3>
-                    <p>Developed a React.js weather app displaying temperature, wind speed, and humidity for any city, using a third-party API.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Peer Assessment Application</h3>
-                    <p>Built a system to anonymously evaluate teammates, with React frontend and MongoDB for data storage, in an Agile environment.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Risk Computer Game</h3>
-                    <p>Developed a strategic game based on the "Warzone" version of Risk using C++ for backend development and map navigation.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Pet Finder Website</h3>
-                    <p>Created a website to help users find pets for adoption, implementing secure user authentication and dynamic JavaScript features.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>ATHack CTF (Hackathon)</h3>
-                    <p>Collaborated in a team to solve cybersecurity challenges using techniques like steganography and cryptography.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Book Record Classifier (Java)</h3>
-                    <p>Built a Java project that reads book records and classifies them based on genre, using regex for error checking and exception handling.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Movie Management System (Java)</h3>
-                    <p>Developed an interactive interface to manage and display movie records, with serialization/deserialization, and genre partitioning.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project-item p-3 mb-3">
-                    <h3>Personal Website</h3>
-                    <p>Created a personal website using HTML and CSS, hosted on GitHub Pages, and implemented Bootstrap 5.0 for a modern UI.</p>
-                </div>
-            </div>
+        <!-- Right Section (Image) -->
+        <div class="right-section">
+            <img src="images/Profilepic.jpeg" alt="Hoang Vu Luu" class="profile-img">
         </div>
     </div>
-</section>
+    <!-- Script for fade away text-->
+    <script src="fadetext.js"></script>
+    <script src="lightdarkmode.js"></script>
 
 
-
-    
-
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container text-center">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">hoangvuluu1624@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/hoangvuluu" target="_blank">HoangVuLuu</a></p>
-        <p>GitHub: <a href="https://github.com/HoangVuLuu" target="_blank">MyProjects</a></p>
-    </div>
-</section>
-
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Hoang Vu Luu</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
