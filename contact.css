@@ -96,7 +96,7 @@ h1 {
     opacity: 0.8;
 }
 
-/* CV Download Button */
+/* CV Download Button
 .cv-button {
     background-color: #fff;
     color: #000;
@@ -123,7 +123,7 @@ h1 {
     transform: scale(1.1);
     border: 2px solid white;
 
-}
+} */
 
 /* Light Mode CV Button */
 body.light-mode .cv-button {
