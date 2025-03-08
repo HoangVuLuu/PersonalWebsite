@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
 /* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', 'Rajdhani', 'Poppins', sans-serif;
 }
+
 
 /* Fade-in effect */
 .fade-in {
@@ -34,7 +37,7 @@ body {
 
 /* Light Mode */
 body.light-mode {
-    background-color: #fff;
+    background-color: #F2F2F2;
     color: #000;
 }
 
@@ -64,13 +67,15 @@ body.light-mode {
 
 /* Title */
 h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
     font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 .subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
     font-size: 1.2rem;
-    margin-bottom: 30px;
 }
 
 /* Social Media Logos */
@@ -103,6 +108,8 @@ h1 {
     align-items: center;
     gap: 10px;
     font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -114,6 +121,8 @@ h1 {
     background-color: #000;
     color: #fff;
     transform: scale(1.1);
+    border: 2px solid white;
+
 }
 
 /* Light Mode CV Button */
@@ -125,6 +134,7 @@ body.light-mode .cv-button {
 body.light-mode .cv-button:hover {
     background-color: #fff;
     color: #000;
+    border: 2px solid #000;
 }
 
 /* Dark Mode Toggle Button */
@@ -138,6 +148,7 @@ body.light-mode .cv-button:hover {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
+
 
 .theme-button:active {
     transform: rotate(180deg);

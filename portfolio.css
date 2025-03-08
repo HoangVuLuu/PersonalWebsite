@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+
 /* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', 'Rajdhani', 'Poppins', sans-serif;
 }
 
 /* Dark Mode (Default) */
@@ -17,7 +20,7 @@ body {
 
 /* Light Mode */
 body.light-mode {
-    background-color: #fff;
+    background-color: #F2F2F2;
     color: #000;
 }
 
@@ -36,23 +39,25 @@ body.light-mode {
     margin: 0 auto;
 }
 
-/* Portfolio Items */
 .portfolio-item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    width: 300px; /* Set your desired width */
+    height: 250px; /* Set your desired height */
 }
 
-/* Portfolio Item Images */
+/* Ensure images fit within the defined container */
 .portfolio-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
+
 
 /* Overlay (Hidden by Default) */
 .portfolio-overlay {
